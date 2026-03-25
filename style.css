@@ -1,0 +1,140 @@
+/* Body and Background */
+body{
+    font-family: 'Poppins', Arial, sans-serif;
+    margin:0;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background: linear-gradient(-45deg, #ffecd2, #fcb69f, #a1c4fd, #c2e9fb);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
+}
+
+@keyframes gradientBG {
+    0% {background-position:0% 50%;}
+    50% {background-position:100% 50%;}
+    100% {background-position:0% 50%;}
+}
+
+/* Container */
+.container{
+    background: rgba(255,255,255,0.95);
+    padding:40px 30px;
+    border-radius:25px;
+    width:380px;
+    box-shadow:0 12px 30px rgba(0,0,0,0.25);
+    text-align:center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.container:hover{
+    transform: translateY(-5px);
+    box-shadow:0 18px 35px rgba(0,0,0,0.35);
+}
+
+/* Heading */
+h2{
+    margin-bottom:25px;
+    font-size:32px;
+    font-weight:700;
+    font-family:'Fredoka One', cursive;
+    color:#333;
+    text-shadow:2px 2px 6px rgba(0,0,0,0.1);
+}
+
+/* Input Section */
+.input-section{
+    display:flex;
+    gap:12px;
+    margin-bottom:25px;
+}
+
+#taskInput{
+    flex:1;
+    padding:14px 18px;
+    border-radius:15px;
+    border:none;
+    outline:none;
+    font-size:16px;
+    font-family:'Poppins', Arial, sans-serif;
+    background:#ffe0e0;
+    box-shadow:0 4px 6px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+#taskInput:focus{
+    background:#fff0d6;
+    box-shadow:0 0 10px rgba(255,193,7,0.6);
+    transform:scale(1.03);
+}
+
+/* Add Button */
+#addBtn{
+    padding:14px 22px;
+    border-radius:15px;
+    border:none;
+    background:#a8dadc;
+    color:#1d3557;
+    cursor:pointer;
+    font-weight:600;
+    font-size:16px;
+    box-shadow:0 4px 8px rgba(0,0,0,0.15);
+    transition: all 0.3s ease;
+    font-family:'Poppins', Arial, sans-serif;
+}
+#addBtn:hover{
+    background:#457b9d;
+    color:#fff;
+    transform:scale(1.05);
+}
+
+/* Task List */
+ul{
+    list-style:none;
+    padding:0;
+}
+
+li{
+    background:#fdf6f0;
+    margin:12px 0;
+    padding:12px;
+    border-radius:15px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    transition: all 0.3s ease;
+    font-family:'Poppins', Arial, sans-serif;
+    box-shadow:0 4px 8px rgba(0,0,0,0.05);
+}
+li:hover{
+    transform: translateX(5px);
+    box-shadow:0 6px 15px rgba(0,0,0,0.1);
+}
+
+/* Edit/Delete Buttons */
+li button{
+    margin-left:8px;
+    padding:6px 12px;
+    border-radius:12px;
+    border:none;
+    cursor:pointer;
+    font-weight:600;
+    font-size:14px;
+    font-family:'Fredoka One', cursive;
+    transition: all 0.3s ease;
+}
+li button.edit{
+    background:#ffd166;
+    color:#333;
+}
+li button.edit:hover{
+    background:#ffb347;
+    transform:scale(1.05);
+}
+li button.delete{
+    background:#ef476f;
+    color:#fff;
+}
+li button.delete:hover{
+    background:#d90429;
+    transform:scale(1.05);
+}
